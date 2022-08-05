@@ -19,7 +19,7 @@ fn main() {
                 middle_content.push_str(" ");
             }
 
-            if c.is_ascii() {
+            if *c >= 32 && *c < 127 {
                 perusal.push(*c as char)
             } else {
                 perusal.push_str(".");
